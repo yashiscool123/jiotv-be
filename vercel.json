@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/*.php": {
-      "runtime": "vercel-php@0.7.1"
+      "runtime": "vercel-php@0.7.0"
     }
   },
   "routes": [
@@ -11,6 +11,7 @@
       "headers": {
         "Cache-Control": "max-age=20, public"
       }
+    },
     {
       "src": "/(.*)\\.m3u8",
       "dest": "/api/index.php?id=$1",
@@ -26,5 +27,4 @@
       }
     }
   ]
-  }
 }
